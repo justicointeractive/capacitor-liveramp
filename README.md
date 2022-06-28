@@ -13,24 +13,38 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`initialize(...)`](#initialize)
+* [`getEnvelope(...)`](#getenvelope)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### initialize(...)
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+initialize(options: { appId: string; }) => Promise<void>
 ```
 
 | Param         | Type                            |
 | ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+| **`options`** | <code>{ appId: string; }</code> |
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+--------------------
+
+
+### getEnvelope(...)
+
+```typescript
+getEnvelope(options: { type: string; identifier: string; }) => Promise<{ envelope: string; }>
+```
+
+| Param         | Type                                               |
+| ------------- | -------------------------------------------------- |
+| **`options`** | <code>{ type: string; identifier: string; }</code> |
+
+**Returns:** <code>Promise&lt;{ envelope: string; }&gt;</code>
 
 --------------------
 
