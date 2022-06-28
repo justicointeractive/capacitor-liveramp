@@ -1,3 +1,7 @@
 export interface LiverampPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  initialize(options: { appId: string }): Promise<void>;
+  getEnvelope(options: {
+    type: string;
+    identifier: string;
+  }): Promise<{ envelope: string }>;
 }

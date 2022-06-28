@@ -9,10 +9,29 @@ import Capacitor
 public class LiverampPlugin: CAPPlugin {
     private let implementation = Liveramp()
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
+    @objc func initialize(_ call: CAPPluginCall) {
+        let appId = call.getString("appId") ?? ""
+        implementation.initialize(appId) { success, error in
+            if success {
+                call.resolve()
+            } else {
+                call.reject("SDK init error: \(String(describing: error))")
+            }
+        }
+    }
+
+    @objc func getEnvelope(_ call: CAPPluginCall) {
+        let type = call.getString("type") ?? ""
+        let identifier = call.getString("identifier") ?? ""
+        implementation.getEnvelope(type, identifier: identifier) { result, error in
+            guard let envelope = result?.envelope else {
+                call.reject("Couldn't retrieve envelope. Error: \(error!)")
+                return
+            }
+            print("Received envelope: \(envelope)")
+            call.resolve([
+                "envelope": envelope
+            ]);
+        }
     }
 }
