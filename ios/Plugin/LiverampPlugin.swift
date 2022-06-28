@@ -11,7 +11,8 @@ public class LiverampPlugin: CAPPlugin {
 
     @objc func initialize(_ call: CAPPluginCall) {
         let appId = call.getString("appId") ?? ""
-        implementation.initialize(appId) { success, error in
+        let isTestMode = call.getBool("isTestMode") ?? false
+        implementation.initialize(appId, isTestMode: isTestMode) { success, error in
             if success {
                 call.resolve()
             } else {

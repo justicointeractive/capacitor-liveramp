@@ -1,5 +1,5 @@
 export interface LiverampPlugin {
-  initialize(options: { appId: string }): Promise<void>;
+  initialize(options: { appId: string; isTestMode: boolean }): Promise<void>;
   getEnvelope(options: {
     type: string;
     identifier: string;

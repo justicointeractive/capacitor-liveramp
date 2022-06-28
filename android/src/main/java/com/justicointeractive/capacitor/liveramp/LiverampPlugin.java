@@ -1,7 +1,6 @@
 package com.justicointeractive.capacitor.liveramp;
 
 import androidx.annotation.Nullable;
-
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
@@ -20,9 +19,11 @@ public class LiverampPlugin extends Plugin {
     @PluginMethod
     public void initialize(PluginCall call) {
         String appId = call.getString("appId");
+        Boolean isTestMode = call.getBoolean("isTestMode");
 
         implementation.initialize(
             appId,
+            isTestMode,
             new LRCompletionHandlerCallback() {
                 @Override
                 public void invoke(boolean success, @Nullable LRError lrError) {
