@@ -24,12 +24,12 @@ npx cap sync
 ### initialize(...)
 
 ```typescript
-initialize(options: { appId: string; }) => Promise<void>
+initialize(options: { appId: string; isTestMode: boolean; }) => Promise<void>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ appId: string; }</code> |
+| Param         | Type                                                 |
+| ------------- | ---------------------------------------------------- |
+| **`options`** | <code>{ appId: string; isTestMode: boolean; }</code> |
 
 --------------------
 
