@@ -63,4 +63,13 @@ public class LiverampPlugin extends Plugin {
             }
         );
     }
+
+    @PluginMethod
+    public void setHasConsentForNoLegislation(PluginCall call) {
+        Boolean hasConsentForNoLegislation = call.getBoolean("hasConsentForNoLegislation");
+
+        implementation.setHasConsentForNoLegislation(hasConsentForNoLegislation);
+
+        call.resolve();
+    }
 }

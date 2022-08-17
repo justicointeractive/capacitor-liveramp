@@ -13,6 +13,7 @@ npx cap sync
 
 <docgen-index>
 
+* [`setHasConsentForNoLegislation(...)`](#sethasconsentfornolegislation)
 * [`initialize(...)`](#initialize)
 * [`getEnvelope(...)`](#getenvelope)
 
@@ -20,6 +21,19 @@ npx cap sync
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
+
+### setHasConsentForNoLegislation(...)
+
+```typescript
+setHasConsentForNoLegislation(options: { hasConsentForNoLegislation: boolean; }) => Promise<void>
+```
+
+| Param         | Type                                                  |
+| ------------- | ----------------------------------------------------- |
+| **`options`** | <code>{ hasConsentForNoLegislation: boolean; }</code> |
+
+--------------------
+
 
 ### initialize(...)
 

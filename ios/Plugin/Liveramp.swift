@@ -10,4 +10,7 @@ import LRAtsSDK
         let lrEmailIdentifier = LREmailIdentifier(identifier);
         LRAts.shared.getEnvelope(lrEmailIdentifier, completion: completionHandler);
     }
+    @objc public func setHasConsentForNoLegislation(_ hasConsentForNoLegislation: Bool) {
+        LRAts.shared.hasConsentForNoLegislation = hasConsentForNoLegislation;
+    }
 }

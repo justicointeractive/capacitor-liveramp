@@ -35,4 +35,10 @@ public class LiverampPlugin: CAPPlugin {
             ]);
         }
     }
+    
+    @objc func setHasConsentForNoLegislation(_ call: CAPPluginCall) {
+        let hasConsentForNoLegislation = call.getBool("hasConsentForNoLegislation") ?? false
+        implementation.setHasConsentForNoLegislation(hasConsentForNoLegislation);
+        call.resolve()
+    }
 }

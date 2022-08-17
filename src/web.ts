@@ -9,4 +9,7 @@ export class LiverampWeb extends WebPlugin implements LiverampPlugin {
   getEnvelope(): Promise<{ envelope: string }> {
     throw new Error('Method not implemented.');
   }
+  setHasConsentForNoLegislation(): Promise<void> {
+    throw new Error('Method not implemented.');
+  }
 }

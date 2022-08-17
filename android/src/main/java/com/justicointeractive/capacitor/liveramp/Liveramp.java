@@ -1,6 +1,5 @@
 package com.justicointeractive.capacitor.liveramp;
 
-import android.util.Log;
 import com.liveramp.ats.LRAtsManager;
 import com.liveramp.ats.callbacks.LRCompletionHandlerCallback;
 import com.liveramp.ats.callbacks.LREnvelopeCallback;
@@ -16,5 +15,9 @@ public class Liveramp {
     public void getEnvelope(String type, String identifier, LREnvelopeCallback envelopeCallback) {
         LREmailIdentifier id = new LREmailIdentifier(identifier);
         LRAtsManager.INSTANCE.getEnvelope(id, envelopeCallback);
+    }
+
+    public void setHasConsentForNoLegislation(Boolean hasConsentForNoLegislation) {
+        LRAtsManager.INSTANCE.setHasConsentForNoLegislation(hasConsentForNoLegislation);
     }
 }

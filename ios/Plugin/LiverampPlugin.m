@@ -6,4 +6,5 @@
 CAP_PLUGIN(LiverampPlugin, "Liveramp",
            CAP_PLUGIN_METHOD(initialize, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(getEnvelope, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(setHasConsentForNoLegislation, CAPPluginReturnPromise);
 )
