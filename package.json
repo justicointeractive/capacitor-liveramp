@@ -1,6 +1,6 @@
 {
   "name": "capacitor-liveramp",
-  "version": "0.0.1-1",
+  "version": "0.0.1-2",
   "description": "LiveRamp ATS and eCST",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
