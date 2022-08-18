@@ -15,5 +15,5 @@ Pod::Spec.new do |s|
   s.dependency 'Capacitor'
   s.swift_version = '5.1'
 
-  s.dependency 'LRAtsSDK'
+  s.dependency 'LRAtsSDK', '1.3.1'
 end
