@@ -9,7 +9,7 @@ import com.liveramp.ats.model.LREmailIdentifier;
 public class Liveramp {
 
     public void initialize(String appId, Boolean isTestMode, LRCompletionHandlerCallback initCallback) {
-        LRAtsManager.INSTANCE.initialize(new LRAtsConfiguration(appId, isTestMode), initCallback);
+        LRAtsManager.INSTANCE.initialize(new LRAtsConfiguration(appId, isTestMode, false), initCallback);
     }
 
     public void getEnvelope(String type, String identifier, LREnvelopeCallback envelopeCallback) {
